@@ -1,0 +1,45 @@
+﻿RabbitMQ for Wonga .Net Core Console Application
+Copyright Protected © Jeandré van Dyk
+___________________________
+
+Installation Notes:
+___________________________
+
+Download a package from https://packages.erlang-solutions.com/erlang/
+Download a package from https://www.rabbitmq.com/install-windows.html
+
+After installation:
+
+-Start RabbitMQ-server in: C:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.3\sbin
+-Then check log files if complete in: C:\Users\FrozenKing173\AppData\Roaming\RabbitMQ\log
+E.g. 2018-03-02 18:43:09.847 [info] <0.5.0> Server startup complete; 0 plugins started.
+
+-Goto CMD then cd to C:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.3\sbin>
+-Type 'rabbitmq-plugins enable rabbitmq_management' => press enter
+
+-Goto local machine Services or run services.msc and look for RabbitMQ service and restart it.
+
+Now you should be able to access http://localhost:15672/ with username: 'guest' and password: 'guest'.
+
+
+Now you can open WongaContactDetailsServiceA.sln as 'A' and WongaContactDetailsServiceB.sln as 'B' with the latest Visual Studio and run it.
+
+Both service a and b are basically the same application
+Run A as Client when debugging and B as Server when debugging.
+These services will log a file in your documents folder every time you send a message.
+___________________________
+
+Licence:
+___________________________
+
+
+WongaContactDetailsServiceA and WongaContactDetailsServiceB may only be used for personal use and for education purposes.
+
+___________________________
+
+Technical Support:
+___________________________
+
+contact: Jeandrevdyk@gmail.com
+
+

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationIcon>default_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DLL\LoggerTool.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="DLL\LoggerTool.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RabbitMQ.Client" Version="5.1.0-pre2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="LoggerTool">
+      <HintPath>DLL\LoggerTool.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
